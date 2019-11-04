@@ -1,6 +1,6 @@
 import roleDAO from "./role"
 
-export const exercisesResolvers = {
+export const roleResolvers = {
   Query: {
     roles() {
       const roles = roleDAO.find().exec()
