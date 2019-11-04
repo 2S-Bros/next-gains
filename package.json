@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.2",
@@ -16,6 +19,7 @@
     "apollo-client": "^2.6.4",
     "apollo-link-http": "^1.5.16",
     "apollo-server-micro": "^2.9.6",
+    "cypress": "^3.4.1",
     "dotenv": "^8.2.0",
     "graphql-tag": "^2.10.1",
     "graphql-toolkit": "^0.5.17",
