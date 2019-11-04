@@ -1,6 +1,6 @@
-const Exercises = require("../../models/exercise")
+import Exercises from "./exercises"
 
-module.exports = {
+export const exercisesResolvers = {
   Query: {
     exercise: (_, { _id }) => {
       const exercise = Exercises.findById(_id)

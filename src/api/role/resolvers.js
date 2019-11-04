@@ -1,6 +1,6 @@
-const roleDAO = require("../../models/role")
+import roleDAO from "./role"
 
-module.exports = {
+export const exercisesResolvers = {
   Query: {
     roles() {
       const roles = roleDAO.find().exec()

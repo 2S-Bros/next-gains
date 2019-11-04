@@ -1,5 +1,4 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+import mongoose, { Schema } from "mongoose"
 
 const exerciseSchema = new Schema({
   authorId: String,
@@ -14,4 +13,5 @@ const exerciseSchema = new Schema({
   // TODO: add workouts
 })
 
-module.exports = mongoose.model("Exercise", exerciseSchema, "Exercise")
+export default mongoose.models.exercises ||
+  mongoose.model("Exercise", exerciseSchema)

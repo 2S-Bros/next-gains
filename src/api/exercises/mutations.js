@@ -1,8 +1,8 @@
-const Exercises = require("../../models/exercise")
+import Exercises from "./exercises"
 
 // TODO: Make sure user has permission to update/delete comment
 
-module.exports = {
+export const exercisesMutations = {
   Mutation: {
     createExercise: (_, { exerciseInput }, { userToken }) => {
       try {

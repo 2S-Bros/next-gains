@@ -1,9 +1,9 @@
-const user = require("../../models/user")
-const role = require("../../models/role")
-const bcrypt = require("bcrypt")
-const jsonwebtoken = require("jsonwebtoken")
+import user from "./users"
+import role from "../role/role"
+import bcrypt from "bcrypt"
+import jsonwebtoken from "jsonwebtoken"
 
-module.exports = {
+export const usersMutations = {
   Mutation: {
     addCard: (_, args) => {
       try {

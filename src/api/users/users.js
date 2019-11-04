@@ -1,5 +1,4 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+import mongoose, { Schema } from "mongoose"
 
 const userSchema = new Schema({
   cards: [String],
@@ -13,4 +12,4 @@ const userSchema = new Schema({
 
 userSchema.index({ username: 1 })
 
-module.exports = mongoose.model("User", userSchema, "User")
+export default mongoose.models.users || mongoose.model("users", userSchema)

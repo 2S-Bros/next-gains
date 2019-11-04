@@ -1,6 +1,6 @@
-const role = require("../../models/role")
+import Role from "./role"
 
-module.exports = {
+export const roleMutations = {
   Mutation: {
     createRole: async (_, args) => {
       try {
