@@ -21,15 +21,16 @@
     "apollo-server-micro": "^2.9.6",
     "bcrypt": "^3.0.6",
     "cypress": "^3.4.1",
-    "jsonwebtoken": "^8.5.1",
     "dotenv": "^8.2.0",
     "graphql-tag": "^2.10.1",
     "graphql-toolkit": "^0.5.17",
     "isomorphic-unfetch": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.5",
     "next": "9.1.1",
     "react": "16.10.2",
     "react-dom": "16.10.2",
+    "react-spring": "^8.0.27",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

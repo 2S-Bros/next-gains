@@ -1,5 +1,6 @@
 import Head from "next/head"
-import Nav from "./nav"
+import Nav from "./Nav"
+import Footer from "./Footer"
 import GlobalStyles from "../styles/GlobalStyles"
 
 const Layout = ({ children }) => {
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       </Head>
       <Nav />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
