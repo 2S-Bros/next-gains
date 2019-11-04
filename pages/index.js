@@ -1,20 +1,36 @@
-import React from "react"
-import Head from "next/head"
-import Nav from "../components/nav"
-import Layout from "../../components/Layout"
+import { withApollo } from "../lib/apollo"
+import Layout from "../components/Layout"
 
-const Home = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-
-    <Nav />
+const Home = () => {
+  return (
     <Layout>
-      <h1>Home</h1>
-    </Layout>
-  </div>
-)
+      <div className="hero">
+        <h1 className="title">Home</h1>
+      </div>
 
-export default Home
+      <style jsx>{`
+        .hero {
+          width: 100%;
+          color: #333;
+        }
+        .title {
+          margin-top: 0;
+          width: 100%;
+          padding-top: 80px;
+          line-height: 1.15;
+          font-size: 48px;
+        }
+        .title,
+        .description {
+          text-align: center;
+        }
+        .list {
+          max-width: 600px;
+          margin: 0 auto;
+        }
+      `}</style>
+    </Layout>
+  )
+}
+
+export default withApollo(Home)
