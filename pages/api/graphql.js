@@ -7,7 +7,7 @@ import { usersResolvers } from "../../src/api/users/resolvers"
 import { usersMutations } from "../../src/api/users/mutations"
 import { roleResolvers } from "../../src/api/role/resolvers"
 import { roleMutations } from "../../src/api/role/mutations"
-import Users from "../../src/api/Exercises/Users.graphql"
+import Users from "../../src/api/users/Users.graphql"
 import Exercises from "../../src/api/exercises/Exercises.graphql"
 import Role from "../../src/api/role/Role.graphql"
 
