@@ -21,7 +21,7 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link href="user-settings">
+            <Link href="settings">
               <a>User Settings</a>
             </Link>
           </li>
@@ -41,12 +41,12 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link rel="prefetch" href="exercises">
+            <Link href="exercises">
               <a>Exercises</a>
             </Link>
           </li>
           <li>
-            <Link rel="prefetch" href="workouts">
+            <Link href="workouts">
               <a>Workouts</a>
             </Link>
           </li>
