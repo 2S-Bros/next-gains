@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 const ExerciseForm = () => {
+  const exercise = {}
   const [name, setName] = useState((exercise && exercise.name) || "")
   const [intensity, setIntensity] = useState(
     (exercise && exercise.intensity) || 1
