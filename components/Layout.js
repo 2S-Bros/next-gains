@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Nav from "./Nav"
+import Nav from "./nav"
 import Footer from "./Footer"
 import GlobalStyles from "../styles/GlobalStyles"
 
