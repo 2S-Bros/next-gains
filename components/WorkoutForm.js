@@ -18,63 +18,61 @@ const WorkoutForm = () => {
   }
 
   return (
-    <Layout>
-      <form action={submit}>
-        <label for="workout-name">
-          <span>Name</span>
-          <input
-            id="workout-name"
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-        </label>
+    <form action={submit}>
+      <label for="workout-name">
+        <span>Name</span>
+        <input
+          id="workout-name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+      </label>
 
+      <label>
+        <span>Intensity</span>
+        <input
+          id="workout-intensity-number"
+          type="number"
+          value={intensity}
+          onChange={e => setIntensity(e.target.value)}
+          min="1"
+          max="4"
+        />
+        <input
+          id="workout-intensity-range"
+          type="range"
+          onChange={e => setIntensity(e.target.value)}
+          value={intensity}
+          min="1"
+          max="4"
+        />
+      </label>
+
+      <label for="workout-description">
+        <span>Description</span>
+        <textarea
+          id="workout-description"
+          value={description}
+          onChange={e => setDescription(e.target.value)}
+        />
+        {description}
+      </label>
+
+      <h4>Exercises</h4>
+      {exercises.map(exercise => (
         <label>
-          <span>Intensity</span>
           <input
-            id="workout-intensity-number"
-            type="number"
-            value={intensity}
-            onChange={e => setIntensity(e.target.value)}
-            min="1"
-            max="4"
+            type="checkbox"
+            group={exercises}
+            value={exercise}
+            onChange={e => setExercises(e.target.value)}
           />
-          <input
-            id="workout-intensity-range"
-            type="range"
-            onChange={e => setIntensity(e.target.value)}
-            value={intensity}
-            min="1"
-            max="4"
-          />
+          {exercise.name}
         </label>
+      ))}
 
-        <label for="workout-description">
-          <span>Description</span>
-          <textarea
-            id="workout-description"
-            value={description}
-            onChange={e => setDescription(e.target.value)}
-          />
-          {description}
-        </label>
-
-        <h4>Exercises</h4>
-        {exercises.map(exercise => (
-          <label>
-            <input
-              type="checkbox"
-              group={exercises}
-              value={exercise}
-              onChange={e => setExercises(e.target.value)}
-            />
-            {exercise.name}
-          </label>
-        ))}
-
-        {!workout && <button class="submit">Create Exercise</button>}
-      </form>
-    </Layout>
+      {!workout && <button class="submit">Create Exercise</button>}
+    </form>
   )
 }
 
