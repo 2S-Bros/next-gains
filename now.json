@@ -1,5 +1,5 @@
 {
   "env": {
-    "MONGO_URL": "mongodb+srv://fake:fake@cluster0-oobsn.mongodb.net/test?retryWrites=true&w=majority"
+    "MONGO_URL": "@mongo_url"
   }
 }
