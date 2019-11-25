@@ -55,7 +55,7 @@ const ExerciseForm = () => {
         {description}
       </label>
 
-      {!exercise && <button class="submit">Create Exercise</button>}
+      <button class="submit">Create Exercise</button>
     </form>
   )
 }

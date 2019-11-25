@@ -19,6 +19,9 @@ const WorkoutsPage = () => {
           </li>
         ))}
       </ul>
+      <Link href="/workouts/new">
+        <a>New Workout</a>
+      </Link>
     </Layout>
   )
 }

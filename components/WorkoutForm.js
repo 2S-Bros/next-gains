@@ -58,20 +58,24 @@ const WorkoutForm = () => {
         {description}
       </label>
 
-      <h4>Exercises</h4>
-      {exercises.map(exercise => (
-        <label>
-          <input
-            type="checkbox"
-            group={exercises}
-            value={exercise}
-            onChange={e => setExercises(e.target.value)}
-          />
-          {exercise.name}
-        </label>
-      ))}
+      {exercises && (
+        <>
+          <h4>Exercises</h4>
+          {exercises.map(exercise => (
+            <label>
+              <input
+                type="checkbox"
+                group={exercises}
+                value={exercise}
+                onChange={e => setExercises(e.target.value)}
+              />
+              {exercise.name}
+            </label>
+          ))}
+        </>
+      )}
 
-      {!workout && <button class="submit">Create Exercise</button>}
+      <button class="submit">Create Workout</button>
     </form>
   )
 }

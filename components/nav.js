@@ -7,12 +7,9 @@ const Nav = () => (
     <ul>
       <li>
         <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/about">
-          <a>About</a>
+          <a>
+            <strong>EPIC GAINS</strong>
+          </a>
         </Link>
       </li>
       <li>
