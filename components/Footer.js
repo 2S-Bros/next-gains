@@ -1,9 +1,10 @@
 import React from "react"
 import Link from "next/link"
+import styled from "styled-components"
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterWrapper>
       <p>&copy; {new Date().getFullYear()} Epic Gains</p>
 
       <nav>
@@ -52,8 +53,17 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-    </footer>
+    </FooterWrapper>
   )
 }
 
 export default Footer
+
+const FooterWrapper = styled.footer`
+  background: var(--blue-600);
+  margin-top: auto;
+  p {
+    text-align: center;
+    color: var(--white);
+  }
+`

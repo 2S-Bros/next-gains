@@ -1,8 +1,9 @@
 import React from "react"
 import Link from "next/link"
+import styled from "styled-components"
 
 const Nav = () => (
-  <nav>
+  <NavWrapper>
     <ul>
       <li>
         <Link href="/">
@@ -35,34 +36,40 @@ const Nav = () => (
         </Link>
       </li>
     </ul>
-
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style>
-  </nav>
+  </NavWrapper>
 )
 
 export default Nav
+
+const NavWrapper = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(249, 170, 51, 0.2);
+  font-weight: 300;
+  padding: 0 1em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    &.selected {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px solid var(--primaryColor);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1em 0.5em;
+    display: block;
+    color: var(--textColor);
+    &.brand {
+      color: var(--primaryColor);
+    }
+  }
+`

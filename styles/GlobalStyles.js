@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
   [data-theme="dark"] {
     --bgColor: var(--blue-800);
     --textColor: var(--white);
-    // --lineColor: var(--light-grey);
+    /* --lineColor: var(--light-grey); */
   }
 
   [data-theme="oled"] {
@@ -43,7 +43,7 @@ const GlobalStyles = createGlobalStyle`
     color: var(--textColor);
   }
 
-  #sapper {
+  #__next {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -119,6 +119,14 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     color: var(--primaryColor);
+  }
+
+  textarea {
+    width: 100%;
+    height: 200px;
+  }
+  label > span {
+    display: block;
   }
 `
 
