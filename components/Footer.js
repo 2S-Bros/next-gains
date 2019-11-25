@@ -10,13 +10,6 @@ const Footer = () => {
       <nav>
         <ul>
           <li>
-            <Link href="/">
-              <a>
-                <strong>EPIC GAINS</strong>
-              </a>
-            </Link>
-          </li>
-          <li>
             <Link href="/dashboard">
               <a>Dashboard</a>
             </Link>
@@ -62,8 +55,25 @@ export default Footer
 const FooterWrapper = styled.footer`
   background: var(--blue-600);
   margin-top: auto;
+  text-align: center;
   p {
     text-align: center;
+    color: var(--white);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1em 0.5em;
+    display: block;
     color: var(--white);
   }
 `
