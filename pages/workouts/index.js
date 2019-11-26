@@ -2,7 +2,15 @@ import Layout from "../../components/Layout"
 import Link from "next/link"
 
 const WorkoutsPage = () => {
-  const workouts = [{ id: "1", name: "chest workout" }]
+  const workouts = [
+    {
+      id: "w1",
+      name: "chest workout",
+      intensity: 3,
+      description: "pump your chest up",
+      exercises: ["pushup", "incline bench", "bench"]
+    }
+  ]
   return (
     <Layout>
       <h1>Workouts</h1>

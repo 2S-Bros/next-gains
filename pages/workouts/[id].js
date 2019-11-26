@@ -6,6 +6,7 @@ const WorkoutPage = () => {
   const [isUpdating, setIsUpdating] = useState(false)
 
   const workout = {
+    id: "w1",
     name: "chest workout",
     intensity: 3,
     description: "pump your chest up",

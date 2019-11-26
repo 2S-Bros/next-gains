@@ -5,6 +5,7 @@ import ExerciseForm from "../../components/ExerciseForm"
 const ExercisePage = () => {
   const [isUpdating, setIsUpdating] = useState(false)
   const exercise = {
+    id: "e1",
     name: "chest exercise",
     intensity: 3,
     description: "push up and down"
