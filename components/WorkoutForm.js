@@ -1,7 +1,6 @@
 import { useState } from "react"
 
-const WorkoutForm = () => {
-  const workout = []
+const WorkoutForm = (workout, onSubmit, cancelAction) => {
   const [name, setName] = useState((workout && workout.name) || "")
   const [intensity, setIntensity] = useState(
     (workout && workout.intensity) || 1
@@ -13,13 +12,9 @@ const WorkoutForm = () => {
     (workout && workout.exercises) || []
   )
 
-  const submit = () => {
-    console.log("submitted")
-  }
-
   return (
-    <form action={submit}>
-      <label for="workout-name">
+    <form action={onSubmit}>
+      <label htmlFor="workout-name">
         <span>Name</span>
         <input
           id="workout-name"
@@ -48,7 +43,7 @@ const WorkoutForm = () => {
         />
       </label>
 
-      <label for="workout-description">
+      <label htmlFor="workout-description">
         <span>Description</span>
         <textarea
           id="workout-description"
@@ -75,7 +70,10 @@ const WorkoutForm = () => {
         </>
       )}
 
-      <button class="submit">Create Workout</button>
+      <button type="submit">Create Workout</button>
+      <button type="button" onClick={cancelAction}>
+        Cancel
+      </button>
     </form>
   )
 }
