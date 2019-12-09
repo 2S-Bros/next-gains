@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose"
+import mongoose, { Schema } from 'mongoose'
 
 const exerciseSchema = new Schema({
   _id: String,
@@ -14,11 +14,11 @@ const exerciseSchema = new Schema({
   // TODO: add workouts
 })
 
-exerciseSchema.pre("save", function(next) {
+exerciseSchema.pre('save', function(next) {
   const id = mongoose.Types.ObjectId().toString()
   this._id = id
   next()
 })
 
 export default mongoose.models.Exercise ||
-  mongoose.model("Exercise", exerciseSchema)
+  mongoose.model('Exercise', exerciseSchema, 'Exercise')

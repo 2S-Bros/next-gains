@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose"
+import mongoose, { Schema } from 'mongoose'
 
 const userSchema = new Schema({
   _id: String,
@@ -11,7 +11,7 @@ const userSchema = new Schema({
   theme: String
 })
 
-userSchema.pre("save", function(next) {
+userSchema.pre('save', function(next) {
   const id = mongoose.Types.ObjectId().toString()
   this._id = id
   next()
@@ -19,4 +19,5 @@ userSchema.pre("save", function(next) {
 
 userSchema.index({ username: 1 })
 
-export default mongoose.models.User || mongoose.model("User", userSchema)
+export default mongoose.models.User ||
+  mongoose.model('User', userSchema, 'User')

@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose"
+import mongoose, { Schema } from 'mongoose'
 
 const roleSchema = new Schema({
   _id: String,
@@ -10,10 +10,11 @@ const roleSchema = new Schema({
   users: [String]
 })
 
-roleSchema.pre("save", function(next) {
+roleSchema.pre('save', function(next) {
   const id = mongoose.Types.ObjectId().toString()
   this._id = id
   next()
 })
 
-export default mongoose.models.Role || mongoose.model("Role", roleSchema)
+export default mongoose.models.Role ||
+  mongoose.model('Role', roleSchema, 'Role')
