@@ -21,4 +21,4 @@ exerciseSchema.pre("save", function(next) {
 })
 
 export default mongoose.models.exercises ||
-  mongoose.model("Exercise", exerciseSchema)
+  mongoose.model("exercises", exerciseSchema)

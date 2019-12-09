@@ -16,4 +16,4 @@ roleSchema.pre("save", function(next) {
   next()
 })
 
-export default mongoose.models.role || mongoose.model("Role", roleSchema)
+export default mongoose.models.role || mongoose.model("role", roleSchema)
