@@ -19,4 +19,4 @@ userSchema.pre("save", function(next) {
 
 userSchema.index({ username: 1 })
 
-export default mongoose.models.users || mongoose.model("users", userSchema)
+export default mongoose.models.User || mongoose.model("User", userSchema)

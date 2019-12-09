@@ -16,9 +16,6 @@ module.exports = {
         systemvars: true
       })
     ]
-    // config.resolve.alias.imports = path.join(__dirname)
-    // config.resolve.alias.api = path.join(__dirname, "api")
-    // config.resolve.modules.push(path.resolve("./"))
     return config
   }
 }
