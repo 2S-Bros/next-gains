@@ -12,6 +12,7 @@ import Exercises from "../../src/api/exercises/Exercises.graphql"
 import Role from "../../src/api/role/Role.graphql"
 
 const resolvers = mergeResolvers([
+  commonResolvers,
   usersResolvers,
   usersMutations,
   roleResolvers,
